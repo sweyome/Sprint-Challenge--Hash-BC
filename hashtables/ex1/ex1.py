@@ -19,7 +19,12 @@ def get_indices_of_item_weights(weights, length, limit):
         hash_table_insert(ht, weights[item], item)
      
     
-    
+    for item in range(length): #! finds two items whose sum of weights equals the weight limit `limit`.
+        the_key = limit-weights[item] #! Subtracts the value of the index from limit
+        test = hash_table_retrieve(ht, the_key) #!  Retrieves index from hash table using the_key as the key
+        
+        
+
   
 def print_answer(answer):
     if answer is not None:
