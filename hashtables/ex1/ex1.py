@@ -27,6 +27,8 @@ def get_indices_of_item_weights(weights, length, limit):
             if test > item:
                 return([test, item])
 
+            else:
+                return [item, test] # .... ?
     return None
 
   
