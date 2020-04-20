@@ -23,8 +23,11 @@ def proof_of_work(last_proof):
     start = timer()
 
     print("Searching for next proof")
-    proof = 0
+    proof = str(random.random())
     #  TODO: Your code here
+    while not valid_proof(last_proof, proof):
+        # proof += 1
+        proof = str(random.random())
 
     print("Proof found: " + str(proof) + " in " + str(timer() - start))
     return proof
