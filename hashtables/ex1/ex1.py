@@ -23,7 +23,11 @@ def get_indices_of_item_weights(weights, length, limit):
         the_key = limit-weights[item] #! Subtracts the value of the index from limit
         test = hash_table_retrieve(ht, the_key) #!  Retrieves index from hash table using the_key as the key
         
-        
+        if test:
+            if test > item:
+                return([test, item])
+
+    return None
 
   
 def print_answer(answer):
