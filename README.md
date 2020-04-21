@@ -30,7 +30,7 @@ Explain in detail the workings of a dynamic array:
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
 > blockchain is structured , time-stamped series of immutable records of data that is managed by a cluster of computers or blocks of data bounded one another using cryptographic principles.
 Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
-
+> proof of work functions by having all nodes solve a cryptographic puzzle. This puzzle is solved by miners and the first one to find the solution gets the reward. possible attacks are hack or alter any information on blockchain.
 ## Project Set Up
 
 #### [Hash Tables]
