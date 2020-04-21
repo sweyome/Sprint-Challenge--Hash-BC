@@ -26,7 +26,7 @@ Explain in detail the workings of a dynamic array:
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
 > since it takes a single step to access via index, to add/remove from back/front. run time complexity is O(1).
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
-
+> adding a new element at the end of the dynamic array takes O(1) time. But if the dynamic array doesn't have any room for the new item, it'll need to expand, which takes O(n) time. And we need to grow the Array
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
  
 Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
