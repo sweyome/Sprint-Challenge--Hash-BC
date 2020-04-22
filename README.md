@@ -26,7 +26,7 @@ Explain in detail the workings of a dynamic array:
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
 > access an item of an array via its index, or add/remove an item at the end of an array, the complexity is O(1). Whereas, linearly searching through an array via its index has a complexity of O(n). Also add or remove from the front requires rendering each element that follows it (i.e. removing an element at index 0 requires relabelling element at index 1 as index 0, and so forth), they have a complexity of O(n)
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
-> adding a new element at the end of the dynamic array takes O(1) time. But if the dynamic array doesn't have any room for the new item, it'll need to expand, which takes O(n) time. And we need to grow the Array.
+> when we approach to the limit of the dynamic array , we need to resize the array (to expand the array the spot might be taken ). Therefore appending an item to our dynamic array(which is full) forces us to make a new double-size underlying array, that append takes O(n) time. The worst scenario is append become O(n) insted of O(1).
 * Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
 > blockchain is structured , time-stamped series of immutable records of data that is managed by a cluster of computers or blocks of data bounded one another using cryptographic principles.
 * Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
