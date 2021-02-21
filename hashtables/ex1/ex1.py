@@ -10,12 +10,28 @@ def get_indices_of_item_weights(weights, length, limit):
     ht = HashTable(16)
 
     """
-    YOUR CODE HERE
+    Given a package with a weight limit `limit` and a list `weights` of item weights, implement a function `get_indices_of_item_weights` that finds two items whose sum of weights equals the weight limit `limit`. Your function will return an instance of an `Answer` tuple that has the following form:
+    ```
+(zero, one)
     """
+    
+    for item in range(length): #! Inserts limit and lists of weights into hash table
+        hash_table_insert(ht, weights[item], item)
+     
+    
+    for item in range(length): #! finds two items whose sum of weights equals the weight limit `limit`.
+        the_key = limit-weights[item] #! Subtracts the value of the index from limit
+        test = hash_table_retrieve(ht, the_key) #!  Retrieves index from hash table using the_key as the key
+        
+        if test:
+            if test > item:
+                return([test, item])
 
+            else:
+                return [item, test] # .... ?
     return None
 
-
+  
 def print_answer(answer):
     if answer is not None:
         print(str(answer[0] + " " + answer[1]))
